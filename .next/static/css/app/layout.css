@@ -644,6 +644,9 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
+.\!scroll-smooth {
+  scroll-behavior: smooth !important;
+}
 .text-balance {
   text-wrap: balance;
 }
@@ -662,6 +665,10 @@ video {
 }
 .border-transparent {
   border-color: transparent;
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
