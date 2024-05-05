@@ -1,2 +1,2 @@
 # Vindi-Craft
-An Information website for a self-made resin craft business
+An Information website for a self-employment resin craft business
