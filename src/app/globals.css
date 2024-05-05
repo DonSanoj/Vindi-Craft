@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+section.hero {
+  @apply grid;
+  grid-template-columns: .4fr .6fr;
+}
