@@ -7,11 +7,11 @@
 .yarn/install-state.gz
 
 # testing
-/coverage
+# /coverage
 
 # next.js
-/.next/
-/out/
+# /.next/
+# /out/
 
 # production
 /build
@@ -21,16 +21,16 @@
 *.pem
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
 
 # local env files
-.env*.local
+# .env*.local
 
 # vercel
-.vercel
+# .vercel
 
 # typescript
-*.tsbuildinfo
-next-env.d.ts
+# *.tsbuildinfo
+# next-env.d.ts
