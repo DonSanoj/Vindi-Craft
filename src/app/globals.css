@@ -36,3 +36,15 @@ section.hero {
   @apply grid;
   grid-template-columns: .4fr .6fr;
 }
+
+.image-hover-effect {
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-hover-effect:hover {
+  transform: scale(1.1);
+}
+
+.kaushan-font {
+  font-family: 'Kaushan Script';
+}
