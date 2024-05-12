@@ -32,7 +32,7 @@ const recentimgElements = [
 
 export default function RecentCrafts() {
     return (
-        <section id="about" className="mt-4 max-w-6xl mx-auto p-4 text-center mb-16 scroll-smooth">
+        <section id="about" className=" mt-[-30px] sm:mt-[-80px] max-w-6xl mx-auto p-4 text-center mb-16 scroll-smooth">
             <SectionHeaders subHeader={'Explore our latest collection of crafts.'} mainHeader={'Recent Crafts'} />
             <div className="mt-12">
                 <Swiper
@@ -44,7 +44,7 @@ export default function RecentCrafts() {
                     modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
                     autoplay={{ delay: 3000 }}
                     className="mySwiper overflow-hidden"
-                    style={{ maxWidth: '100%', height: '400px' }}
+                    style={{ maxWidth: '100%', height: '500px' }}
                 >
                     {recentimgElements.map(({ imageUrl }, index) => (
                         <SwiperSlide key={index}>

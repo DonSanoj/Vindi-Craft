@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
+import { FaChevronDown } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
 export default function Header() {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,12 +29,14 @@ export default function Header() {
         };
     }, []);
 
+    const ArrowIcon = dropdownOpen ? IoClose : FaChevronDown;
+
     return (
         <header className="bg-black text-white shadow-md fixed z-50 w-full top-0">
             <div className="container mx-auto p-4 px-8 flex items-center justify-between border-b border-gray-600">
                 <Link href={'/'} className="cursor-pointer flex items-center">
                     <div className="h-10 w-auto mr-4">
-                        <Image src={'/vindi_craft.png'} alt={'Vindi Craft'} width={50} height={50} />
+                        <Image src={'/vindi_craft.png'} alt={'Vindi Craft'} width={50} height={50} className=" about-drop-shadow" />
                     </div>
                 </Link>
 
@@ -49,7 +54,7 @@ export default function Header() {
                             className="lg:hidden bg-[#eee] text-black rounded-lg cursor-pointer p-2 hover:bg-gradient-to-r from-blue-500 to-purple-500 hover:text-white"
                             onClick={toggleDropdown}
                         >
-                            <Image src={dropdownOpen ? '/up-arrow-svgrepo-com.png' : '/down-arrow-svgrepo-com.png'} alt="navBar" width={50} height={50} className="size-6" />
+                            <ArrowIcon width={50} height={50} className="size-6" />
                         </div>
                         {dropdownOpen && (
                             <div className="absolute top-full left-0 bg-white border border-gray-200 rounded-lg shadow-lg">
@@ -62,6 +67,7 @@ export default function Header() {
                             </div>
                         )}
                     </div>
+
 
                     <Link href={'https://www.facebook.com/profile.php?id=61555844843889'}>
                         <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full px-4 py-2 hover:text-[#dadada]">
