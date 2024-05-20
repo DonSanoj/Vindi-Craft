@@ -6,54 +6,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/moving-border";
 
+import { cn } from "@/utils/cn";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { GlobeDemo } from "@/components/layout/Globe";
+
 export default function About() {
 
     return (
         <>
             {/* 
-
-                <div className=" mt-4">
-
-                    <h2>What We Offer</h2>
-                    <ul className=" list-disc">
-                        <li><span>Handcrafted Treasures: </span>
-                            Each piece at Vindi Craft is meticulously handcrafted with attention to detail,
-                            making it a one-of-a-kind treasure.
-                        </li>
-                        <li><span>Custom Creations: </span>
-                            We offer custom-made designs tailored to your preferences,
-                            ensuring that every piece is as unique as you are.
-                        </li>
-                        <li><span>Wide Range of Products: </span>
-                            From jewelry and home decor to gifts and personalized items,
-                            we have a diverse range of products to suit every occasion and taste.
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div>
-                    <h2>Our Commitment</h2>
-                    <ul className=" list-disc">
-                        <li><span>Quality: </span>
-                            We believe in using high-quality materials and techniques to
-                            create durable and beautiful crafts that stand the test of time.
-                        </li>
-                        <li><span>Creativity: </span>
-                            Innovation is at the heart of everything we do.
-                            We constantly explore new ideas and techniques to bring fresh and exciting designs to life.
-                        </li>
-                        <li><span>Fast and Reliable Delivery: </span>
-                            We are committed to ensuring that your orders are delivered promptly and efficiently.
-                            Our streamlined processes and reliable shipping partners
-                            enable us to offer fast delivery without compromising on quality.
-                        </li>
-                        <li><span>Customer Satisfaction: </span>
-                            Your satisfaction is our top priority.
-                            We strive to provide excellent customer service and ensure that every purchase exceeds your expectations.
-                        </li>
-                    </ul>
-                </div>
 
                 <div>
                     <h2>Get in Touch</h2>
@@ -65,10 +27,6 @@ export default function About() {
                         today to learn more or discuss custom orders.
                     </p>
                 </div> */}
-
-            {/* </div>
-
-            </section> */}
 
             <section id="hero" className="mt-10 sm:mt-14 max-w-6xl mx-auto p-4 border-gray-600 sm:mb-16 scroll-smooth flex h-screen">
 
@@ -105,6 +63,114 @@ export default function About() {
                 </div>
             </section>
 
+
+            <section className="mt-[30px] sm:mt-[50px] flex justify-center items-center">
+                <div className="max-w-4xl px-4 mx-auto sm:text-left text-center">
+                    <WhatWeOffers />
+                </div>
+            </section>
+
+            <section className="mt-[30px] sm:mt-[50px] flex justify-center items-center">
+                <div className="max-w-4xl px-4 mx-auto sm:text-left text-center">
+                    <SectionHeaders mainHeader={'Our Commitment'} />
+                    <OurCommitment />
+                </div>
+            </section>
+
         </>
     );
 }
+
+export function WhatWeOffers() {
+    return (
+        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+            {itemsForOffers.map((item, i) => (
+                <BentoGridItem
+                    key={i}
+                    title={item.title}
+                    description={item.description}
+                    header={item.header}
+                    className={item.className}
+                    icon={item.icon}
+                />
+            ))}
+        </BentoGrid>
+    );
+}
+
+const Image01 = () => (
+    <div
+        className="flex flex-1 w-72 h-full min-h-[6rem] rounded-xl border border-transparent bg-neutral-100 dark:bg-black">
+        <img src="/aboutImg01.jpg" className=" rounded-xl w-96" />
+    </div>
+);
+
+const Image02 = () => (
+    <div
+        className="flex flex-1 w-72 h-full min-h-[6rem] rounded-xl border border-transparent bg-neutral-100 dark:bg-black">
+        <img src="/aboutImg02.jpg" className=" rounded-xl w-96" />
+    </div>
+);
+
+const itemsForOffers = [
+    {
+        title: "What We Offer",
+        className: "md:col-span-1 justify-center items-center text-3xl",
+    },
+    {
+        title: "Handcrafted Treasures",
+        description: "Each piece at Vindi Craft is meticulously handcrafted with attention to detail, making it a one-of-a-kind treasure.",
+        header: <Image01 />,
+        className: "md:col-span-4 text-xl",
+    },
+    {
+        header: <GlobeDemo />,
+        className: "md:col-span-5  md:row-span-2",
+    },
+    {
+        title: "Custom Creations",
+        description: "We offer custom-made designs tailored to your preferences, ensuring that every piece is as unique as you are.",
+        header: <Image02 />,
+        className: "md:col-span-2 text-xl",
+    },
+];
+
+export function OurCommitment() {
+    return (
+        <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+            {itemsForCommitment.map((item, i) => (
+                <BentoGridItem
+                    key={i}
+                    title={item.title}
+                    description={item.description}
+                    header={item.header}
+                    className={item.className}
+                    icon={item.icon}
+                />
+            ))}
+        </BentoGrid>
+    );
+}
+
+const itemsForCommitment = [
+    {
+        title: "Quality",
+        description: "We believe in using high-quality materials and techniques to create durable and beautiful crafts that stand the test of time.",
+        className: "md:col-span-1 text-2xl",
+    },
+    {
+        title: "Creativity",
+        description: "Innovation is at the heart of everything we do. We constantly explore new ideas and techniques to bring fresh and exciting designs to life.",
+        className: "md:col-span-2 text-2xl",
+    },
+    {
+        title: "Fast and Reliable Delivery",
+        description: "We are committed to ensuring that your orders are delivered promptly and efficiently. Our streamlined processes and reliable shipping partners enable us to offer fast delivery without compromising on quality.",
+        className: "md:col-span-2 text-2xl",
+    },
+    {
+        title: "Customer Satisfaction",
+        description: "Your satisfaction is our top priority. We strive to provide excellent customer service and ensure that every purchase exceeds your expectations.",
+        className: "md:col-span-1 text-2xl",
+    },
+];
