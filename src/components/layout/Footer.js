@@ -27,7 +27,7 @@ export default function Footer() {
             <div className="flex gap-4">
                 <h3 className="text-sm sm:text-base">
                     Developed by{' '}
-                    <Link className=' text-blue-500' href={'https://www.facebook.com/don.sanoj.1'}>Sanoj Aminda</Link>
+                    <Link className=' text-blue-500' href={'https://sanoj-portfolio.vercel.app/'}>Sanoj Aminda</Link>
                 </h3>
             </div>
         </footer>

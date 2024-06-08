@@ -6,6 +6,7 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 import RecentCrafts from "@/components/layout/RecentCrafts";
+import BackToTop from "@/components/layout/BackToTop";
 
 export default function Home() {
   return (
@@ -20,7 +21,9 @@ export default function Home() {
           <h2 className="uppercase text-gray-600 text-xl sm:text-3xl lg:text-4xl font-semibold leading-4 mb-3 text-center">
             Explore new Resin Crafts With
           </h2>
-          <h1 className="mt-3 text-6xl sm:text-5xl lg:text-7xl kaushan-font italic text-gradient-to-r from-blue-500 via-purple-500 to-purple-500 text-center">Vindi Craft</h1>
+          <h1 className="mt-3 text-6xl sm:text-5xl lg:text-7xl kaushan-font italic bg-gradient-to-r from-blue-500 via-purple-500 to-purple-500 bg-clip-text text-transparent text-center">
+            Vindi Craft
+          </h1>
 
           <h3 className="mt-3 sm:mt-5 lg:mt-10 text-lg lg:text-xl text-gray-500 text-center">
             Resin is a versatile material used in crafts, art, and industrial applications.
@@ -50,6 +53,8 @@ export default function Home() {
       </section>
 
       <RecentCrafts />
+
+      <BackToTop />
 
     </>
   );

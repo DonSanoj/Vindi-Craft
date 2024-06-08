@@ -30,7 +30,7 @@ export function Button({
         }, React.createElement("div", {
             className: cn("h-20 w-20 opacity-[0.8] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]", borderClassName)
         }))), React.createElement("div", {
-            className: cn("relative bg-slate-900/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased", className),
+            className: cn("relative bg-gradient-to-r from-blue-500 to-purple-500/[0.8] border border-slate-800 backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased", className),
             style: {
                 borderRadius: `calc(${borderRadius} * 0.96)`
             }

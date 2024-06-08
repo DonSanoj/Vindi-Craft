@@ -2,32 +2,19 @@
 
 import React from "react";
 import { SectionHeaders } from "@/components/layout/SectionHeaders";
-import Image from "next/image";
-import Link from "next/link";
+
 import { Button } from "@/components/ui/moving-border";
 
 import { cn } from "@/utils/cn";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { AiOutlineGlobal } from "react-icons/ai";
 import { GlobeDemo } from "@/components/layout/Globe";
+import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "@/components/ui/text-reveal-card";
+import BackToTop from "@/components/layout/BackToTop";
 
 export default function About() {
 
     return (
         <>
-            {/* 
-
-                <div>
-                    <h2>Get in Touch</h2>
-                    <p>Experience the beauty of resin artistry with Vindi Craft! Explore our collection, discover unique creations,
-                        and let us bring your artistic visions to life.
-
-                        <Link href={'/contact'} className=" text-blue-700"> Contact us </Link>
-
-                        today to learn more or discuss custom orders.
-                    </p>
-                </div> */}
-
             <section id="hero" className="mt-10 sm:mt-14 max-w-6xl mx-auto p-4 border-gray-600 sm:mb-16 scroll-smooth flex h-screen">
 
                 <div className="flex justify-center items-center flex-col w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative">
@@ -35,7 +22,7 @@ export default function About() {
                     <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
                     <h1
-                        className="mt-3 text-5xl sm:text-4xl lg:text-6xl text-gradient-to-r from-blue-500 via-purple-500 to-purple-500 text-center">
+                        className="mt-3 text-5xl sm:text-4xl lg:text-6xl bg-gradient-to-r from-blue-500 via-purple-500 to-purple-500 bg-clip-text text-transparent text-center">
                         About Vindi Craft
                     </h1>
 
@@ -76,6 +63,14 @@ export default function About() {
                     <OurCommitment />
                 </div>
             </section>
+
+            <section className="mt-[30px] sm:mt-[50px] flex justify-center items-center">
+                <div className="max-w-4xl px-4 mx-auto sm:text-left text-center">
+                    <GetInTouch />
+                </div>
+            </section>
+
+            <BackToTop />
 
         </>
     );
@@ -174,3 +169,22 @@ const itemsForCommitment = [
         className: "md:col-span-1 text-2xl",
     },
 ];
+
+export function GetInTouch() {
+    return (
+        <div className="flex items-center justify-center bg-black rounded-2xl w-full">
+            <TextRevealCard
+                text="Get in Touch"
+                revealText="Experience the beauty of resin artistry with Vindi Craft! Explore our collection, discover unique creations,
+                and let us bring your artistic visions to life. Contact us today to learn more or discuss custom orders."
+            >
+                <TextRevealCardTitle>
+                    Something, you just need to see it.
+                </TextRevealCardTitle>
+                <TextRevealCardDescription>
+                    Reveal the card with hovering
+                </TextRevealCardDescription>
+            </TextRevealCard>
+        </div>
+    );
+}
