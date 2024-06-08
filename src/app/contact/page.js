@@ -41,8 +41,6 @@ export default function Contact() {
         }
     };
 
-    const description = "We love hearing from our community! Whether you have questions about our resin crafts, need assistance with an order, or simply want to share your thoughts, we're here to help. Reach out to us through any of the methods below, and we'll get back to you as soon as possible.";
-
     return (
         <>
             <section className="mt-8 sm:mt-10 max-w-6xl mx-auto p-4 border-gray-600 sm:mb-16 scroll-smooth flex h-screen">
@@ -54,7 +52,7 @@ export default function Contact() {
                     </h1>
 
                     <h3 className="mt-3 sm:mt-5 lg:mt-10 text-lg lg:text-xl text-gray-400 sm:text-gray-500 text-center">
-                        {description}
+                    We love hearing from our community! Whether you have questions about our resin crafts, need assistance with an order, or simply want to share your thoughts, we&apos;re here to help. Reach out to us through any of the methods below, and we&apos;ll get back to you as soon as possible.
                     </h3>
                 </div>
             </section>
